@@ -1,0 +1,88 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+html {
+  font-size: 18px;
+}
+
+@theme {
+  --color-purple-50: #faf4fb;
+  --color-purple-100: #f5e9f7;
+  --color-purple-200: #e7cbeb;
+  --color-purple-300: #d7a7dd;
+  --color-purple-400: #c27acc;
+  --color-purple-500: #983FA4;
+  --color-purple-600: #82368c;
+  --color-purple-700: #662a6f;
+  --color-purple-800: #522258;
+  --color-purple-900: #411b46;
+  --color-purple-950: #261029;
+
+  --color-green-50: #f5fdf2;
+  --color-green-100: #ecfae5;
+  --color-green-200: #d2f4c3;
+  --color-green-300: #b2ec98;
+  --color-green-400: #8ce264;
+  --color-green-500: #51B722;
+  --color-green-600: #48a31e;
+  --color-green-700: #398118;
+  --color-green-800: #2e6713;
+  --color-green-900: #24520f;
+  --color-green-950: #152f09;
+
+  --color-cyan-50: #f0fdff;
+  --color-cyan-100: #e0fcff;
+  --color-cyan-200: #b8f8ff;
+  --color-cyan-300: #85f3ff;
+  --color-cyan-400: #47ecff;
+  --color-cyan-500: #00B9CE;
+  --color-cyan-600: #00aec2;
+  --color-cyan-700: #008999;
+  --color-cyan-800: #006e7a;
+  --color-cyan-900: #005761;
+  --color-cyan-950: #003238;
+
+  --color-orange-50: #fdf7f2;
+  --color-orange-100: #fbf0e4;
+  --color-orange-200: #f6dbc0;
+  --color-orange-300: #f0c293;
+  --color-orange-400: #e9a35e;
+  --color-orange-500: #e2872c;
+  --color-orange-600: #aa6117;
+  --color-orange-700: #874c12;
+  --color-orange-800: #6c3d0f;
+  --color-orange-900: #55300c;
+  --color-orange-950: #311c07;
+
+  --color-red-50: #fef2f1;
+  --color-red-100: #fde4e2;
+  --color-red-200: #fac1bc;
+  --color-red-300: #f7948c;
+  --color-red-400: #f35f53;
+  --color-red-500: #ef2616;
+  --color-red-600: #b5190c;
+  --color-red-700: #8f140a;
+  --color-red-800: #731008;
+  --color-red-900: #5b0c06;
+  --color-red-950: #340704;
+
+  --color-blue-50: #f0faff;
+  --color-blue-100: #e0f4ff;
+  --color-blue-200: #b8e5ff;
+  --color-blue-300: #85d3ff;
+  --color-blue-400: #47bdff;
+  --color-blue-500: #0084ce;
+  --color-blue-600: #007cc2;
+  --color-blue-700: #006299;
+  --color-blue-800: #004e7a;
+  --color-blue-900: #003e61;
+  --color-blue-950: #002438;
+
+  /* aliases semânticos */
+  --color-primary: var(--color-purple-500);
+  --color-success: var(--color-green-500);
+  --color-info: var(--color-cyan-500);
+  --color-warning: var(--color-orange-500);
+  --color-danger: var(--color-red-500);
+  --color-link: var(--color-blue-500);
+}
