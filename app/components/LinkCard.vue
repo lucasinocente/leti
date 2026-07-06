@@ -25,7 +25,7 @@ withDefaults(
       class="rounded-lg object-cover"
     >
     <div class="min-w-0" :class="image ? 'text-center' : ''">
-      <p class="truncate font-semibold" :class="external ? 'text-link' : 'text-purple-950'">
+      <p class="font-semibold" :class="external ? 'text-link' : 'text-purple-950'">
         {{ title }}
       </p>
       <p v-if="description" class="mt-0.5 text-sm text-purple-700">
