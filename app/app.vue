@@ -4,7 +4,18 @@ const { data: profile } = await useAsyncData('profile', () => queryCollection('p
 useHead({
   title: () => profile.value ? `${profile.value.name} - ${profile.value.description}` : undefined,
   meta: [{ name: 'description', content: () => profile.value?.description }],
-  link: [{ rel: 'icon', href: () => profile.value?.avatar }]
+  link: [{ rel: 'icon', href: () => profile.value?.avatar }],
+  script: [
+    { src: 'https://www.googletagmanager.com/gtag/js?id=G-86ZLZJRZ9L', async: true },
+    {
+      innerHTML: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-86ZLZJRZ9L');
+      `
+    }
+  ]
 })
 </script>
 
