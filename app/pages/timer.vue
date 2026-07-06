@@ -163,14 +163,14 @@ onUnmounted(() => {
       <div class="grid w-full grid-cols-2 gap-4">
         <button
           type="button"
-          class="flex flex-col items-center rounded-xl bg-purple-800 py-4 active:scale-95"
+          class="flex flex-col items-center rounded-xl bg-purple-800 py-1 active:scale-95"
           @click="adjust(60)"
         >
           <span class="text-3xl font-bold leading-none">+</span>
         </button>
         <button
           type="button"
-          class="flex flex-col items-center rounded-xl bg-purple-900 py-4 active:scale-95"
+          class="flex flex-col items-center rounded-xl bg-purple-900 py-1 active:scale-95"
           @click="adjust(10)"
         >
           <span class="text-3xl font-bold leading-none">+</span>
@@ -187,14 +187,14 @@ onUnmounted(() => {
       <div class="grid w-full grid-cols-2 gap-4">
         <button
           type="button"
-          class="flex flex-col items-center rounded-xl bg-purple-800 py-4 active:scale-95"
+          class="flex flex-col items-center rounded-xl bg-purple-800 py-1 active:scale-95"
           @click="adjust(-60)"
         >
           <span class="text-3xl font-bold leading-none">-</span>
         </button>
         <button
           type="button"
-          class="flex flex-col items-center rounded-xl bg-purple-900 py-4 active:scale-95"
+          class="flex flex-col items-center rounded-xl bg-purple-900 py-1 active:scale-95"
           @click="adjust(-10)"
         >
           <span class="text-3xl font-bold leading-none">-</span>
@@ -258,20 +258,22 @@ onUnmounted(() => {
             min="1"
             max="60"
             step="1"
-            class="w-14 rounded-lg bg-purple-800 px-3 py-2 text-center text-lg"
+            class="w-12 rounded-lg bg-purple-800 px-3 py-2 text-center text-lg"
           >
         </div>
 
         <div class="mt-4 flex items-center justify-between gap-4">
-          <label for="silent-mode" class="text-lg">Modo silencioso</label>
-          <span class="bg-purple-800 px-4 py-2 rounded-lg flex items-center">
+          <span class="text-lg">Modo silencioso</span>
+          <label class="relative inline-flex h-7 w-12 shrink-0 cursor-pointer items-center">
             <input
               id="silent-mode"
               v-model="silentMode"
               type="checkbox"
-              class="h-6 w-6 accent-purple-500"
+              class="peer sr-only"
             >
-          </span>
+            <span class="absolute inset-0 rounded-full bg-purple-700 transition-colors peer-checked:bg-purple-500" />
+            <span class="absolute left-1 h-5 w-5 rounded-full bg-white transition-transform peer-checked:translate-x-5" />
+          </label>
         </div>
 
         <div class="mt-6 flex items-center justify-between gap-4">
