@@ -78,6 +78,42 @@ html {
   --color-blue-900: #003e61;
   --color-blue-950: #002438;
 
+  --color-brown-50: #fdf6ee;
+  --color-brown-100: #f8e8d4;
+  --color-brown-200: #eccca4;
+  --color-brown-300: #dba86e;
+  --color-brown-400: #c4813e;
+  --color-brown-500: #a5652a;
+  --color-brown-600: #855122;
+  --color-brown-700: #6b421c;
+  --color-brown-800: #573617;
+  --color-brown-900: #452b13;
+  --color-brown-950: #26170a;
+
+  --color-black-50: #fafafa;
+  --color-black-100: #f4f4f5;
+  --color-black-200: #e4e4e7;
+  --color-black-300: #d4d4d8;
+  --color-black-400: #a1a1aa;
+  --color-black-500: #71717a;
+  --color-black-600: #52525b;
+  --color-black-700: #3f3f46;
+  --color-black-800: #27272a;
+  --color-black-900: #18181b;
+  --color-black-950: #09090b;
+
+  --color-white-50: #ffffff;
+  --color-white-100: #fafafa;
+  --color-white-200: #f0f0f0;
+  --color-white-300: #e0e0e0;
+  --color-white-400: #ffffff;
+  --color-white-500: #bdbdbd;
+  --color-white-600: #ababab;
+  --color-white-700: #999999;
+  --color-white-800: #868686;
+  --color-white-900: #737373;
+  --color-white-950: #616161;
+
   /* aliases semânticos */
   --color-primary: var(--color-purple-500);
   --color-success: var(--color-green-500);
