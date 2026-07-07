@@ -1,6 +1,12 @@
 <script setup lang="ts">
 definePageMeta({ layout: 'blank' })
 
+const { data: profile } = useAsyncData('profile', () => queryCollection('profile').first())
+
+useHead({
+  title: () => profile.value ? `Timer - ${profile.value.name}` : 'Timer'
+})
+
 const MAX_DURATION = 3600
 const BEEP_SECONDS = [10, 5, 4, 3, 2, 1]
 
