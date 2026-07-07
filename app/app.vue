@@ -5,7 +5,7 @@ useHead({
   title: () => profile.value ? `${profile.value.name} - ${profile.value.description}` : undefined,
   meta: [{ name: 'description', content: () => profile.value?.description }],
   link: [{ rel: 'icon', href: () => profile.value?.avatar }],
-  script: [
+  script: import.meta.dev ? [] : [
     { src: 'https://www.googletagmanager.com/gtag/js?id=G-86ZLZJRZ9L', async: true },
     {
       innerHTML: `
