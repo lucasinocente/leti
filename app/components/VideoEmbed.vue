@@ -3,6 +3,7 @@ const props = defineProps<{
   title: string
   description?: string
   url: string
+  to?: string
 }>()
 
 function extractYoutubeId(url: string) {
@@ -28,7 +29,10 @@ const videoId = computed(() => extractYoutubeId(props.url))
       />
     </div>
     <div class="px-4 py-3">
-      <p class="font-semibold text-purple-950">
+      <NuxtLink v-if="to" :to="to" class="font-semibold text-purple-950">
+        {{ title }}
+      </NuxtLink>
+      <p v-else class="font-semibold text-purple-950">
         {{ title }}
       </p>
       <p v-if="description" class="mt-0.5 text-sm text-purple-700">

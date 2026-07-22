@@ -28,12 +28,14 @@ const visibleLinks = computed(() => links.value?.filter((link) => !link.hide) ??
           :title="link.title"
           :description="link.description"
           :url="link.url ?? ''"
+          :to="link.path"
         />
         <MapEmbed
           v-else-if="link.type === 'maps'"
           :title="link.title"
           :description="link.description"
           :address="link.address ?? ''"
+          :to="link.path"
         />
         <LinkCard
           v-else-if="link.type === 'external'"
