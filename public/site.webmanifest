@@ -1,0 +1,13 @@
+{
+  "name": "Leti Monteiro BJJ",
+  "short_name": "Leti Monteiro BJJ",
+  "description": "Atleta & prof de jiu-jitsu na Vibe Jiu Jitsu @ Porto Alegre - RS",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf4fb",
+  "theme_color": "#983FA4",
+  "icons": [
+    { "src": "/leti-monteiro-bjj.jpg", "sizes": "192x192", "type": "image/jpeg" },
+    { "src": "/leti-monteiro-bjj.jpg", "sizes": "512x512", "type": "image/jpeg" }
+  ]
+}

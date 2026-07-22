@@ -1,0 +1,13 @@
+{
+  "name": "Timer BJJ",
+  "short_name": "Timer",
+  "description": "Cronômetro de rounds para aula de jiu-jitsu",
+  "start_url": "/timer",
+  "display": "standalone",
+  "background_color": "#261029",
+  "theme_color": "#261029",
+  "icons": [
+    { "src": "/leti-monteiro-bjj.jpg", "sizes": "192x192", "type": "image/jpeg" },
+    { "src": "/leti-monteiro-bjj.jpg", "sizes": "512x512", "type": "image/jpeg" }
+  ]
+}

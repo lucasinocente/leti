@@ -1,10 +1,9 @@
 <script setup lang="ts">
 definePageMeta({ layout: 'blank' })
 
-const { data: profile } = useAsyncData('profile', () => queryCollection('profile').first())
-
 useHead({
-  title: () => profile.value ? `Timer - ${profile.value.name}` : 'Timer'
+  title: 'Timer - Leti Monteiro BJJ',
+  link: [{ rel: 'manifest', href: '/timer-manifest.json', key: 'manifest' }]
 })
 
 const MAX_DURATION = 3600
@@ -256,6 +255,10 @@ watch([configuredDuration, silentMode, colorMode, roundNumber], () => {
 
 onMounted(() => {
   document.getElementById('bjj-preload-skeleton')?.remove()
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/timer-sw.js', { scope: '/timer' }).catch(() => {})
+  }
 })
 
 onUnmounted(() => {

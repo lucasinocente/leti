@@ -4,7 +4,11 @@ const { data: profile } = await useAsyncData('profile', () => queryCollection('p
 useHead({
   title: () => profile.value ? `${profile.value.name} - ${profile.value.description}` : undefined,
   meta: [{ name: 'description', content: () => profile.value?.description }],
-  link: [{ rel: 'icon', href: () => profile.value?.avatar }],
+  link: [
+    { rel: 'icon', href: () => profile.value?.avatar },
+    { rel: 'apple-touch-icon', href: () => profile.value?.avatar },
+    { rel: 'manifest', href: '/site.webmanifest', key: 'manifest' }
+  ],
   script: import.meta.dev ? [] : [
     { src: 'https://www.googletagmanager.com/gtag/js?id=G-86ZLZJRZ9L', async: true },
     {

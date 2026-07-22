@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxt/content', 'nuxt-studio'],
   studio: {
+    dev: import.meta.dev,
     repository: {
       provider: 'github',
       owner: 'lucasinocente',
@@ -17,7 +18,6 @@ export default defineNuxtConfig({
   routeRules: {
     '/timer': { ssr: false }
   },
-  spaLoadingTemplate: 'app/spa-loading-template.html',
   app: {
     head: {
       script: [
@@ -61,6 +61,14 @@ export default defineNuxtConfig({
     }
   },
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    vite: {
+      optimizeDeps: {
+        include: [
+          '@vue/devtools-core',
+          '@vue/devtools-kit',
+        ]
+      }
+    }
   }
 })
