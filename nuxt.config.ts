@@ -4,7 +4,15 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/content'],
+  modules: ['@nuxt/content', 'nuxt-studio'],
+  studio: {
+    repository: {
+      provider: 'github',
+      owner: 'lucasinocente',
+      repo: 'leti',
+      branch: 'main'
+    }
+  },
   css: ['~/assets/css/main.css'],
   routeRules: {
     '/timer': { ssr: false }
